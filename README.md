@@ -41,8 +41,7 @@ avaliacao: nota de 1 a 5, dada ao final da leitura.
 dataInicio e dataFim: registram o período da leitura.
 
 📸 Visual do Aplicativo
-<img width="310" height="181" alt="image" src="https://github.com/user-attachments/assets/9032ad63-aa2b-4e6c-ac1d-e7c8fc7674e2" />
-
+<img width="310" height="181" alt="image" src="https://github.com/user-attachments/assets/9032ad63-aa2b-4e6c-ac1d-e7c8fc7674e2" /> <br> </br>
 
 
 👩‍💻 Autor
