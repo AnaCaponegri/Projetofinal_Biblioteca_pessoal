@@ -27,8 +27,6 @@ Após isso, o menu principal aparecerá no terminal, permitindo navegar entre as
 - chalk para deixar as mensagens coloridas e mais legíveis.
 - fs (File System) para salvar e carregar os dados no arquivo dados.json.
 
-.
-
 🗂️ Estrutura de Dados
 Os livros são armazenados em um arquivo dados.json no formato de uma lista de objetos.
 Cada livro possui os seguintes atributos:
