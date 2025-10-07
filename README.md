@@ -43,6 +43,8 @@ dataInicio e dataFim: registram o período da leitura.
 📸 Visual do Aplicativo
 <img width="310" height="181" alt="image" src="https://github.com/user-attachments/assets/9032ad63-aa2b-4e6c-ac1d-e7c8fc7674e2" />
 
+
+
 👩‍💻 Autor
 O projeto foi desenvolvido por Ana Caponegri, estudante e desenvolvedora em formação, com foco em front-end e aprimoramento em JavaScript.
 Contato: ana_caponegri@estudante.sc.senai.br
