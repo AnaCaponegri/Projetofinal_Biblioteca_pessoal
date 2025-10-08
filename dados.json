@@ -1,1 +1,38 @@
-[]
+[
+  {
+    "id": 1,
+    "titulo": "A Menina que Roubava Livros",
+    "autor": "Markus Zusak",
+    "paginas": 480,
+    "genero": "Romance",
+    "status": "quero_ler",
+    "paginaAtual": 0,
+    "avaliacao": null,
+    "dataInicio": null,
+    "dataFim": null
+  },
+  {
+    "id": 2,
+    "titulo": "1984",
+    "autor": "George Orwell",
+    "paginas": 416,
+    "genero": "Ficção",
+    "status": "quero_ler",
+    "paginaAtual": 0,
+    "avaliacao": null,
+    "dataInicio": null,
+    "dataFim": null
+  },
+  {
+    "id": 3,
+    "titulo": "Clean Code",
+    "autor": "Robert Martin",
+    "paginas": 464,
+    "genero": "Programação",
+    "status": "quero_ler",
+    "paginaAtual": 0,
+    "avaliacao": null,
+    "dataInicio": null,
+    "dataFim": null
+  }
+]
