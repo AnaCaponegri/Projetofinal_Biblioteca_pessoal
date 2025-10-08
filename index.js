@@ -29,6 +29,8 @@ async function menuPrincipal() {
       { name: "Ver lista de livros", value: "listar" },
       { name: "Marcar como lido / atualizar progresso", value: "atualizar" },
       { name: "Ver estatísticas", value: "estatisticas" },
+      { name: "Apagar livro", value: "apagar" },
+      { name: "Apagar todos os livros (resetar)", value: "resetar" },
       { name: "Sair", value: "sair" },
     ],
   });
@@ -45,6 +47,12 @@ async function menuPrincipal() {
       break;
     case "estatisticas":
       mostrarEstatisticas();
+      break;
+    case "apagar":
+      await apagarLivro();
+      break;
+    case "resetar":
+      await resetarBiblioteca();
       break;
     case "sair":
       console.log(chalk.green("Até a próxima! 👋"));
@@ -63,7 +71,7 @@ async function cadastrarLivro() {
 
   const livros = carregarLivros();
   const novoLivro = {
-    id: livros.length + 1,
+    id: livros.length > 0 ? livros[livros.length - 1].id + 1 : 1,
     titulo,
     autor,
     paginas,
@@ -136,6 +144,46 @@ async function atualizarLivro() {
 
   salvarLivros(livros);
   console.log(chalk.green("\n📖 Livro atualizado com sucesso!\n"));
+}
+
+// Apagar livro individualmente
+async function apagarLivro() {
+  const livros = carregarLivros();
+  if (livros.length === 0) {
+    console.log(chalk.yellow("Nenhum livro cadastrado."));
+    return;
+  }
+
+  const escolha = await inquirer.select({
+    message: "Escolha o livro que deseja apagar:",
+    choices: livros.map((l) => ({ name: `${l.titulo} (${l.autor})`, value: l.id })),
+  });
+
+  const confirmar = await inquirer.confirm({
+    message: "Tem certeza que deseja apagar este livro?",
+  });
+
+  if (confirmar) {
+    const novosLivros = livros.filter((l) => l.id !== escolha);
+    salvarLivros(novosLivros);
+    console.log(chalk.red("\n🗑️ Livro removido com sucesso!\n"));
+  } else {
+    console.log(chalk.gray("\nAção cancelada.\n"));
+  }
+}
+
+// Resetar biblioteca (apagar todos os livros)
+async function resetarBiblioteca() {
+  const confirmar = await inquirer.confirm({
+    message: chalk.red("Tem certeza que deseja apagar TODOS os livros? Esta ação não pode ser desfeita."),
+  });
+
+  if (confirmar) {
+    salvarLivros([]);
+    console.log(chalk.redBright("\n⚠️ Todos os livros foram apagados!\n"));
+  } else {
+    console.log(chalk.gray("\nAção cancelada.\n"));
+  }
 }
 
 // Estatísticas
