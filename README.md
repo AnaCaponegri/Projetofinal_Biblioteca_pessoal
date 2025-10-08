@@ -54,4 +54,4 @@ Uso de async/await em aplicações Node.js.
 Organização de código em funções bem definidas.
 Pensamento voltado à experiência do usuário mesmo em um ambiente de terminal.
 
-https://www.canva.com/design/DAG1Ji8Arco/gx_kjwggUxciusOLN3LKpw/edit
+[https://www.canva.com/design/DAG1Ji8Arco/gx_kjwggUxciusOLN3LKpw/edit](https://www.canva.com/design/DAG1Ji8Arco/gx_kjwggUxciusOLN3LKpw/edit?utm_content=DAG1Ji8Arco&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
