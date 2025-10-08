@@ -53,3 +53,5 @@ Criação de menus interativos e lógicos com @inquirer/prompts.
 Uso de async/await em aplicações Node.js.
 Organização de código em funções bem definidas.
 Pensamento voltado à experiência do usuário mesmo em um ambiente de terminal.
+
+https://www.canva.com/design/DAG1Ji8Arco/gx_kjwggUxciusOLN3LKpw/edit
